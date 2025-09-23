@@ -17,6 +17,9 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        tag: [latest, '3.10', 3.10-slim, '3.11', 3.11-slim, '3.12', 3.12-slim, '3.13', 3.13-slim]
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -37,4 +40,4 @@ jobs:
           platforms: linux/amd64,linux/arm/v7,linux/arm64/v8
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/prek:latest
+            ghcr.io/${{ github.repository_owner }}/prek:${{ matrix.tag }}

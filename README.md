@@ -14,6 +14,14 @@ Available on [GitHub Container Registry](https://ghcr.io/juhannc/prek).
 
 ## Available images
 
-| Image    | GitHub Container Registry     |
-| -------- | ----------------------------- |
-| `latest` | `ghcr.io/juhannc/prek:latest` |
+| Image       | GitHub Container Registry        |
+| ----------- | -------------------------------- |
+| `latest`    | `ghcr.io/juhannc/prek:latest`    |
+| `3.13`      | `ghcr.io/juhannc/prek:3.13`      |
+| `3.13-slim` | `ghcr.io/juhannc/prek:3.13-slim` |
+| `3.12`      | `ghcr.io/juhannc/prek:3.12`      |
+| `3.12-slim` | `ghcr.io/juhannc/prek:3.12-slim` |
+| `3.11`      | `ghcr.io/juhannc/prek:3.11`      |
+| `3.11-slim` | `ghcr.io/juhannc/prek:3.11-slim` |
+| `3.10`      | `ghcr.io/juhannc/prek:3.10`      |
+| `3.10-slim` | `ghcr.io/juhannc/prek:3.10-slim` |
