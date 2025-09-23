@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Johann Christensen
+#
+# SPDX-License-Identifier: MIT
+.github/**/*
+.editorconfig
+.pre-commit-config.yaml
+README.md
