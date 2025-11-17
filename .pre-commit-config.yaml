@@ -13,7 +13,7 @@ repos:
         args: [--fix=lf]
       - id: trailing-whitespace
   - repo: https://github.com/fsfe/reuse-tool
-    rev: v5.1.1
+    rev: v6.2.0
     hooks:
       - id: reuse
         name: Check license headers (REUSE)
@@ -31,12 +31,12 @@ repos:
         name: Fixing markdown linting errors
         args: [--disable, MD013, --fix]
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.34.0
+    rev: 0.35.0
     hooks:
       - id: check-github-workflows
         name: Check GitHub Workflow configuration
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 3.4.0
+    rev: 3.4.1
     hooks:
       - id: editorconfig-checker
   - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
