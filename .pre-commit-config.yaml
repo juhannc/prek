@@ -25,7 +25,7 @@ repos:
         args:
           - --write-changes
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.45.0
+    rev: v0.46.0
     hooks:
       - id: markdownlint
         name: Fixing markdown linting errors
@@ -36,7 +36,7 @@ repos:
       - id: check-github-workflows
         name: Check GitHub Workflow configuration
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 3.4.1
+    rev: 3.6.0
     hooks:
       - id: editorconfig-checker
   - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
