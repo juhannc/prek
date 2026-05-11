@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        tag: [latest, '3.10', 3.10-slim, '3.11', 3.11-slim, '3.12', 3.12-slim, '3.13', 3.13-slim]
+        tag: [latest, '3.10', 3.10-slim, '3.11', 3.11-slim, '3.12', 3.12-slim, '3.13', 3.13-slim, '3.14', 3.14-slim]
     steps:
       - name: Checkout
         uses: actions/checkout@v6
