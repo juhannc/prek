@@ -25,3 +25,10 @@ Available on [GitHub Container Registry](https://ghcr.io/juhannc/prek).
 | `3.11-slim` | `ghcr.io/juhannc/prek:3.11-slim` |
 | `3.10`      | `ghcr.io/juhannc/prek:3.10`      |
 | `3.10-slim` | `ghcr.io/juhannc/prek:3.10-slim` |
+
+Each image is published as a multi-architecture manifest for:
+
+- `linux/amd64`
+- `linux/arm64`
+- `linux/arm/v7`
+- `linux/386`
