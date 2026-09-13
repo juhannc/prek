@@ -16,19 +16,21 @@ RUN set -eux; \
             mv /root/.local/bin/prek /usr/bin/prek; \
             ;; \
         *) \
+            case "$(dpkg --print-architecture)" in \
+                i386) rust_host=i686-unknown-linux-gnu ;; \
+                armhf) rust_host=armv7-unknown-linux-gnueabihf ;; \
+                *) echo "Unsupported architecture for source build fallback"; exit 1 ;; \
+            esac; \
             apt-get update; \
             apt-get install --no-install-recommends -y \
                 build-essential \
-                cargo \
-                pkg-config \
-                rustc; \
-            cargo install --locked --git https://github.com/j178/prek --bin prek; \
+                pkg-config; \
+            curl --proto '=https' --tlsv1.2 -LsSf https://sh.rustup.rs | sh -s -- -y --profile minimal --default-host "${rust_host}" --default-toolchain 1.96.0; \
+            /root/.cargo/bin/cargo install --locked --git https://github.com/j178/prek --bin prek; \
             mv /root/.cargo/bin/prek /usr/bin/prek; \
             apt-get purge -y --auto-remove \
                 build-essential \
-                cargo \
-                pkg-config \
-                rustc; \
-            rm -rf /root/.cargo/registry /root/.cargo/git /var/lib/apt/lists/*; \
+                pkg-config; \
+            rm -rf /root/.cargo /root/.rustup /var/lib/apt/lists/*; \
             ;; \
     esac
