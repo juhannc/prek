@@ -26,7 +26,7 @@ RUN set -eux; \
                 build-essential \
                 pkg-config; \
             curl --proto '=https' --tlsv1.2 -LsSf https://sh.rustup.rs | sh -s -- -y --profile minimal --default-host "${rust_host}" --default-toolchain 1.96.0; \
-            /root/.cargo/bin/cargo install --locked --git https://github.com/j178/prek --bin prek; \
+            CARGO_NET_GIT_FETCH_WITH_CLI=true /root/.cargo/bin/cargo install --locked --git https://github.com/j178/prek --bin prek; \
             mv /root/.cargo/bin/prek /usr/bin/prek; \
             apt-get purge -y --auto-remove \
                 build-essential \
