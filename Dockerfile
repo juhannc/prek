@@ -26,8 +26,11 @@ RUN set -eux; \
                 build-essential \
                 pkg-config; \
             curl --proto '=https' --tlsv1.2 -LsSf https://sh.rustup.rs | sh -s -- -y --profile minimal --default-host "${rust_host}" --default-toolchain 1.96.0; \
-            CARGO_NET_GIT_FETCH_WITH_CLI=true /root/.cargo/bin/cargo install --locked --git https://github.com/j178/prek --bin prek; \
+            curl --proto '=https' --tlsv1.2 -fLsS -o /tmp/prek-source.tar.gz https://github.com/j178/prek/archive/refs/heads/master.tar.gz; \
+            tar -xzf /tmp/prek-source.tar.gz -C /tmp; \
+            /root/.cargo/bin/cargo install --locked --path /tmp/prek-master/crates/prek --bin prek; \
             mv /root/.cargo/bin/prek /usr/bin/prek; \
+            rm -rf /tmp/prek-master /tmp/prek-source.tar.gz; \
             apt-get purge -y --auto-remove \
                 build-essential \
                 pkg-config; \
