@@ -14,17 +14,19 @@ Available on [GitHub Container Registry](https://ghcr.io/juhannc/prek).
 
 ## Available images
 
-| Image       | GitHub Container Registry        |
-| ----------- | -------------------------------- |
-| `latest`    | `ghcr.io/juhannc/prek:latest`    |
-| `3.13`      | `ghcr.io/juhannc/prek:3.13`      |
-| `3.13-slim` | `ghcr.io/juhannc/prek:3.13-slim` |
-| `3.12`      | `ghcr.io/juhannc/prek:3.12`      |
-| `3.12-slim` | `ghcr.io/juhannc/prek:3.12-slim` |
-| `3.11`      | `ghcr.io/juhannc/prek:3.11`      |
-| `3.11-slim` | `ghcr.io/juhannc/prek:3.11-slim` |
-| `3.10`      | `ghcr.io/juhannc/prek:3.10`      |
-| `3.10-slim` | `ghcr.io/juhannc/prek:3.10-slim` |
+| Image          | GitHub Container Registry           |
+| -------------- | ----------------------------------- |
+| `latest`       | `ghcr.io/juhannc/prek:latest`       |
+| `3.15-rc`     | `ghcr.io/juhannc/prek:3.15-rc`     |
+| `3.15-rc-slim` | `ghcr.io/juhannc/prek:3.15-rc-slim` |
+| `3.14`         | `ghcr.io/juhannc/prek:3.14`         |
+| `3.14-slim`    | `ghcr.io/juhannc/prek:3.14-slim`    |
+| `3.13`         | `ghcr.io/juhannc/prek:3.13`         |
+| `3.13-slim`    | `ghcr.io/juhannc/prek:3.13-slim`    |
+| `3.12`         | `ghcr.io/juhannc/prek:3.12`         |
+| `3.12-slim`    | `ghcr.io/juhannc/prek:3.12-slim`    |
+
+`latest` tracks the newest stable Python release (currently 3.14). The `3.15-rc` images use the Python 3.15 release candidate; they are preview images until Python 3.15 final is released.
 
 Each image is published as a multi-architecture manifest for:
 
